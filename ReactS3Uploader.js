@@ -9,7 +9,7 @@ var React = require('react'),
 
 var ReactS3Uploader = createReactClass({
 
-    propTypes: {
+    propertyTypes: {
         signingUrl: PropTypes.string,
         getSignedUrl: PropTypes.func,
         preprocess: PropTypes.func,
@@ -113,7 +113,7 @@ var ReactS3Uploader = createReactClass({
         var temporaryProps = objectAssign({}, this.props, additional);
         var inputProps = {};
 
-        var invalidProps = Object.keys(ReactS3Uploader.propTypes);
+        var invalidProps = Object.keys(this.propertyTypes);
 
         for(var key in temporaryProps) {
             if(temporaryProps.hasOwnProperty(key) && invalidProps.indexOf(key) === -1) {
